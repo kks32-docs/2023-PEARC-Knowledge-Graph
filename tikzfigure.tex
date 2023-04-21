@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{tikzpicture}[
+designsafenode/.style={circle, draw=teal!70, fill=teal!5, very thick},
+cyannode/.style={circle, draw=cyan!60, fill=cyan!5, very thick},
+bluenode/.style={circle, draw=blue!60, fill=blue!5, very thick},
+rednode/.style={circle, draw=red!60, fill=red!5, very thick},
+yellownode/.style={circle, draw=yellow!60, fill=yellow!5, thick},
+brownnode/.style={circle, draw=brown!60, fill=brown!5, thick},
+]
+%Nodes
+% \node[squarednode]      (maintopic)                              {2};
+% \node[roundnode]        (uppercircle)       [above=of maintopic] {1};
+% \node[squarednode]      (rightsquare)       [right=of maintopic] {3};
+% \node[roundnode]        (lowercircle)       [below=of maintopic] {4};
+\node[rednode](main){Main};
+\node[designsafenode][below=of main]{sub};
+%Lines
+% \draw[->] (uppercircle.south) -- (maintopic.north);
+% \draw[->] (maintopic.east) -- (rightsquare.west);
+% \draw[->] (rightsquare.south) .. controls +(down:7mm) and +(right:7mm) .. (lowercircle.east);
+\end{tikzpicture}
+\end{document}
